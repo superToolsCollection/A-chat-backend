@@ -15,7 +15,7 @@ import (
 **/
 
 var (
-	addr   = ":2022"
+	addr = ":2022"
 )
 
 //func init() {
@@ -24,8 +24,8 @@ var (
 
 func main() {
 	s, err := file.ReadFile("/Users/super/develop/A-chat-backend/cmd/chatroom/banner.txt")
-	if err != nil{
-	    log.Println(err)
+	if err != nil {
+		log.Println(err)
 		return
 	}
 	fmt.Println(s)
