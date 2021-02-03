@@ -33,10 +33,8 @@ type User struct {
 	Addr           string        `json:"addr"`
 	MessageChannel chan *Message `json:"-"`
 	Token          string        `json:"token"`
-
-	conn *websocket.Conn
-
-	isNew bool
+	conn           *websocket.Conn
+	isNew          bool
 }
 
 // 系统用户，代表是系统主动发送的消息
@@ -49,8 +47,7 @@ func NewUser(conn *websocket.Conn, token, nickname, addr string) *User {
 		EnterAt:        time.Now(),
 		MessageChannel: make(chan *Message, 32),
 		Token:          token,
-
-		conn: conn,
+		conn:           conn,
 	}
 
 	if user.Token != "" {

@@ -18,10 +18,6 @@ var (
 	addr = ":2022"
 )
 
-//func init() {
-//	global.Init()
-//}
-
 func main() {
 	s, err := file.ReadFile("/Users/super/develop/A-chat-backend/cmd/chatroom/banner.txt")
 	if err != nil {
